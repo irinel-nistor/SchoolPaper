@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <form  method="post" action="admin/start">
+      {% if test %}
+        Test started at <b>{{ test.startTime }}</b> 
+        <br/>
+        <div><input formaction="admin/end" type="submit" value="End test"></div>
+      {% else %}
+        Create a new test
+        <br/>
+        <div><input  type="submit" value="Start test"></div>
+      {% endif %}
+    </form>
+    <a href="{{ url }}">{{ url_linktext }}</a>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+  <body>
+    {% for test in tests %}
+      {% if test.supervizor %}
+      <form method="post">
+          <label>{{ test.supervizor.nickname }} </label> 
+          <label>{{ test.startTime }}</label>
+          <input type="hidden" value="{{ test.key }}" name="test-key">
+          <input type="submit" value="Attend" formaction="attend" />
+      </form>
+        {% endif %}
+     {% endfor %}
+     <a href="{{ url }}">{{ url_linktext }}</a>
+  </body>
+</html>

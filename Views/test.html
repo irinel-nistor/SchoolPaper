@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <form method="post" action="send">
+      {% if test %}
+        <label>{{ test.question1 }} </label> 
+        <br/>
+        <input type="text" name="answer1" />
+        <br/>
+        <br/>
+        <label>{{ test.question2 }}</label>
+        <br/>
+        <input type="text" name="answer2" />
+        <br/>
+        <br/>
+        <label>{{ test.question3 }}</label>
+        <br/>
+        <input type="text" name="answer3" />
+        <br/>
+        <br/>
+        <input type="hidden" value="{{ test.key }}" name="test-key">
+        <input type="submit" value="Send"  />
+      {% endif %}
+    </form>
+     <a href="{{ url }}">{{ url_linktext }}</a>
+  </body>
+</html>

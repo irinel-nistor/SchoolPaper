@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <div>
+      <form action="send" method="post">
+      {% for result in results %}
+        {% if result %}
+            <label>{{ result.attendee.email }} </label> 
+            <label>{{ result.grade }}</label>
+            <br/>
+          {% endif %}
+       {% endfor %}
+        <input type="submit" value="Send email"  />
+      <form/>
+    </div>
+     <br/>
+     <br/>
+     <a href="/">home</a>
+     <a href="{{ url }}">{{ url_linktext }}</a>
+  </body>
+</html>
